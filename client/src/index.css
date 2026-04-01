@@ -1,0 +1,258 @@
+/* ============================================================
+   TECH4CHANGE — Deep Space Tech / Mission Control Aesthetic
+   Design System:
+   - Background: Deep navy-black (#060B18)
+   - Primary Accent: Electric Teal (#DC2626)
+   - Secondary Accent: Amber (#EF4444)
+   - Display Font: Outfit ExtraBold 800
+   - Body Font: DM Sans 400/500
+   - Mono Font: JetBrains Mono
+   ============================================================ */
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* Custom brand tokens */
+  --color-teal: #DC2626;
+  --color-amber-brand: #EF4444;
+  --color-space-dark: #060B18;
+  --color-space-mid: #0D1628;
+  --color-space-light: #152035;
+  --color-space-border: rgba(220, 38, 38, 0.15);
+}
+
+:root {
+  --radius: 0.5rem;
+  --background: oklch(0.07 0.02 240);
+  --foreground: oklch(0.95 0.005 200);
+  --card: oklch(0.10 0.025 240);
+  --card-foreground: oklch(0.95 0.005 200);
+  --popover: oklch(0.10 0.025 240);
+  --popover-foreground: oklch(0.95 0.005 200);
+  --primary: oklch(0.62 0.24 27);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.13 0.025 240);
+  --secondary-foreground: oklch(0.85 0.01 200);
+  --muted: oklch(0.13 0.02 240);
+  --muted-foreground: oklch(0.6 0.02 220);
+  --accent: oklch(0.13 0.025 240);
+  --accent-foreground: oklch(0.95 0.005 200);
+  --destructive: oklch(0.65 0.22 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.62 0.24 27 / 0.15);
+  --input: oklch(0.62 0.24 27 / 0.12);
+  --ring: oklch(0.62 0.24 27 / 0.5);
+  --chart-1: oklch(0.62 0.24 27);
+  --chart-2: oklch(0.75 0.18 80);
+  --chart-3: oklch(0.65 0.20 270);
+  --chart-4: oklch(0.70 0.15 150);
+  --chart-5: oklch(0.60 0.22 25);
+  --sidebar: oklch(0.10 0.025 240);
+  --sidebar-foreground: oklch(0.95 0.005 200);
+  --sidebar-primary: oklch(0.62 0.24 27);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-accent: oklch(0.13 0.025 240);
+  --sidebar-accent-foreground: oklch(0.95 0.005 200);
+  --sidebar-border: oklch(0.62 0.24 27 / 0.15);
+  --sidebar-ring: oklch(0.62 0.24 27 / 0.5);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    background-color: #060B18;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    font-style: normal;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+
+  /* Teal glow button */
+  .btn-teal {
+    background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+    color: #060B18;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
+  }
+  .btn-teal:hover {
+    box-shadow: 0 0 35px rgba(220, 38, 38, 0.55);
+    transform: translateY(-1px);
+  }
+
+  /* Amber CTA button */
+  .btn-amber {
+    background: linear-gradient(135deg, #EF4444 0%, #B91C1C 100%);
+    color: #060B18;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+  }
+  .btn-amber:hover {
+    box-shadow: 0 0 35px rgba(239, 68, 68, 0.55);
+    transform: translateY(-1px);
+  }
+
+  /* Ghost button with teal border */
+  .btn-ghost-teal {
+    background: transparent;
+    border: 1px solid rgba(220, 38, 38, 0.4);
+    color: #DC2626;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: all 0.2s ease;
+  }
+  .btn-ghost-teal:hover {
+    background: rgba(220, 38, 38, 0.08);
+    border-color: rgba(220, 38, 38, 0.7);
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.2);
+  }
+
+  /* Glowing card */
+  .card-glow {
+    background: rgba(13, 22, 40, 0.8);
+    border: 1px solid rgba(220, 38, 38, 0.12);
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+  }
+  .card-glow:hover {
+    border-color: rgba(220, 38, 38, 0.35);
+    box-shadow: 0 0 30px rgba(220, 38, 38, 0.1), 0 8px 32px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px);
+  }
+
+  /* Section label */
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    font-style: normal;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #DC2626;
+  }
+
+  /* Dot grid background */
+  .dot-grid {
+    background-image: radial-gradient(circle, rgba(220, 38, 38, 0.08) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  /* Teal text gradient */
+  .text-teal-gradient {
+    background: linear-gradient(135deg, #DC2626 0%, #EF4444 50%, #B91C1C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Amber text */
+  .text-amber-brand {
+    color: #EF4444;
+  }
+
+  /* Live indicator pulse */
+  .live-dot {
+    width: 8px;
+    height: 8px;
+    background: #DC2626;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #DC2626;
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; box-shadow: 0 0 8px #DC2626; }
+    50% { opacity: 0.5; box-shadow: 0 0 16px #DC2626; }
+  }
+}

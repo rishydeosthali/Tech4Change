@@ -1,6 +1,8 @@
 # Dependencies
 **/node_modules
 .pnpm-store/
+
+# Local toolchain / cached runtimes (never commit)
 .local/
 
 # Build outputs

@@ -4,12 +4,12 @@ const pillars = [
   {
     title: "Small Business Focused",
     description:
-      "We build practical AI and websites for local businesses that need real results, not enterprise complexity.",
+      "We build practical websites for local businesses that need real results, not agency bloat.",
   },
   {
     title: "Done-For-You Execution",
     description:
-      "From voice agents to full website builds, we handle strategy, setup, and launch so you can stay focused on operations.",
+      "From strategy to launch, we handle the website work so you can stay focused on running your business.",
   },
   {
     title: "Growth You Can Measure",
@@ -38,18 +38,20 @@ export default function AboutUs() {
             className="text-4xl md:text-6xl font-extrabold mb-6"
             style={{ fontFamily: "Outfit, sans-serif", color: "#fff", lineHeight: 1.05 }}
           >
-            We Build AI Systems and
+            We Build Websites
             <br />
-            <span className="text-teal-gradient">Websites That Grow Businesses</span>
+            <span className="text-teal-gradient">That Grow Businesses</span>
           </h1>
 
           <p
             className="max-w-3xl text-base md:text-lg mb-8"
             style={{ color: "rgba(255,255,255,0.62)", lineHeight: 1.8 }}
           >
-            Tech4Change helps small businesses modernize with practical AI and high-converting
-            websites. We combine strategy, design, and implementation to deliver tools that
-            actually improve day-to-day performance.
+            At Tech4Change, we are a group of ambitious young software developers dedicated
+            to creating impactful digital solutions. We focus on building custom websites
+            that are not only visually appealing but also fast, functional, and designed to
+            convert. By combining creativity with technical expertise, we help businesses
+            elevate their brand and succeed online.
           </p>
 
           <div
@@ -90,9 +92,9 @@ export default function AboutUs() {
                 What We Build
               </h3>
               <ul className="space-y-2" style={{ color: "rgba(255,255,255,0.6)", lineHeight: 1.7 }}>
-                <li>AI voice agents that capture and respond to customer calls.</li>
-                <li>Custom website development focused on lead generation.</li>
-                <li>Digital infrastructure that supports long-term growth.</li>
+                <li>Custom website design tailored to your brand.</li>
+                <li>Website development focused on speed and lead generation.</li>
+                <li>Digital foundations that support long-term growth.</li>
               </ul>
             </div>
             <div
@@ -135,10 +137,10 @@ export default function AboutUs() {
 
           <div className="flex flex-wrap gap-4">
             <button
-              onClick={() => (window.location.href = "/#contact")}
+              onClick={() => (window.location.href = "/contact-us")}
               className="btn-amber px-7 py-3.5 rounded-md text-base"
             >
-              Work With Us
+              Get in Touch
             </button>
             <button
               onClick={() => (window.location.href = "/")}

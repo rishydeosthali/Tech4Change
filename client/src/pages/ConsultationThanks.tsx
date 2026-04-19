@@ -24,7 +24,7 @@ export default function ConsultationThanks() {
             Thank you for reaching out
           </h1>
           <p className="text-base mb-10" style={{ color: "rgba(255,255,255,0.58)", lineHeight: 1.75 }}>
-            We received your consultation request. A Tech4Change specialist will get in touch within 24 hours. You may
+            We received your website consultation request. A Tech4Change specialist will get in touch within 24 hours. You may
             receive a short confirmation email from our form provider.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">

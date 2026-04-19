@@ -5,6 +5,9 @@
 # Local toolchain / cached runtimes (never commit)
 .local/
 
+# Vercel local project link
+.vercel/
+
 # Build outputs
 dist/
 build/

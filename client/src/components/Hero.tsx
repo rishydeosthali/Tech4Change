@@ -9,9 +9,8 @@ import { ArrowRight, Play, ChevronDown } from "lucide-react";
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663460370702/ecG8FietAg7LHPWEcKYES2/hero-bg-c8iCZrhbxNhgD9Vk4xH9hZ.webp";
 
 const stats = [
-  { value: "3x", label: "More Customer Calls Handled" },
-  { value: "94%", label: "Review Response Rate" },
-  { value: "60%", label: "Reduction in Overhead" },
+  { value: "100%", label: "Mobile-Friendly Builds" },
+  { value: "24/7", label: "Lead Capture Working for You" },
   // for future use: { value: "500+", label: "Businesses Empowered" },
 ];
 
@@ -92,11 +91,11 @@ export default function Hero() {
       />
 
       {/* Content */}
-      <div className="container relative z-10 pt-24 pb-16">
+      <div className="container relative z-10 pt-28 pb-20 md:pt-32 md:pb-24">
         <div className="max-w-4xl">
           {/* Label */}
           <div
-            className="inline-flex items-center gap-2 mb-6"
+            className="inline-flex items-center gap-2 mb-8"
             style={{
               opacity: visible ? 1 : 0,
               transform: visible ? "translateY(0)" : "translateY(20px)",
@@ -104,12 +103,12 @@ export default function Hero() {
             }}
           >
             <span className="live-dot" />
-            <span className="section-label">AI-Powered Business Solutions</span>
+            <span className="section-label">Professional Websites for Small Business</span>
           </div>
 
           {/* Main headline */}
           <h1
-            className="mb-6 leading-[1.05]"
+            className="mb-8 leading-[1.05]"
             style={{
               fontFamily: "Outfit, sans-serif",
               fontWeight: 800,
@@ -120,16 +119,16 @@ export default function Hero() {
               transition: "all 0.7s ease 0.2s",
             }}
           >
-            Give Your Business
+            Build Your Business
             <br />
-            <span className="text-teal-gradient">Enterprise AI</span>
+            <span className="text-teal-gradient">A Better Website</span>
             <br />
-            <span style={{ color: "rgba(255,255,255,0.9)" }}>Without the Price Tag</span>
+            <span style={{ color: "rgba(255,255,255,0.9)" }}>That Actually Converts</span>
           </h1>
 
           {/* Subheadline */}
           <p
-            className="mb-10 max-w-2xl"
+            className="mb-12 max-w-2xl"
             style={{
               fontFamily: "DM Sans, sans-serif",
               fontSize: "clamp(1rem, 2vw, 1.2rem)",
@@ -140,14 +139,14 @@ export default function Hero() {
               transition: "all 0.7s ease 0.35s",
             }}
           >
-            Tech4Change deploys intelligent AI voice agents, automated review management, 
-            and smart business automation — so you can focus on growth while AI handles 
-            the rest. No technical expertise required.
+            Tech4Change designs and builds clean, modern websites for local businesses
+            that want to look credible, load fast, and turn visitors into real leads.
+            We especially help barbershops, HVAC companies, real estate brands, and local service providers.
           </p>
 
           {/* CTAs */}
           <div
-            className="flex flex-wrap gap-4 mb-16"
+            className="flex flex-wrap gap-4 md:gap-5 mb-18 md:mb-20"
             style={{
               opacity: visible ? 1 : 0,
               transform: visible ? "translateY(0)" : "translateY(20px)",
@@ -159,7 +158,7 @@ export default function Hero() {
               className="btn-amber flex items-center gap-2 px-7 py-3.5 rounded-md text-base"
             >
               {/* for future use: Start Free Trial */}
-              Schedule Free AI Consultation
+              Schedule Free Website Consultation
               <ArrowRight size={18} />
             </button>
             <button
@@ -173,7 +172,7 @@ export default function Hero() {
 
           {/* Stats row */}
           <div
-            className="grid grid-cols-1 sm:grid-cols-3 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl"
             style={{
               opacity: visible ? 1 : 0,
               transform: visible ? "translateY(0)" : "translateY(20px)",
@@ -181,7 +180,14 @@ export default function Hero() {
             }}
           >
             {stats.map((stat) => (
-              <div key={stat.value} className="flex flex-col">
+              <div
+                key={stat.value}
+                className="flex flex-col rounded-xl p-5 md:p-6"
+                style={{
+                  background: "rgba(13,22,40,0.58)",
+                  border: "1px solid rgba(220,38,38,0.12)",
+                }}
+              >
                 <span
                   style={{
                     fontFamily: "Outfit, sans-serif",
@@ -198,10 +204,10 @@ export default function Hero() {
                     fontFamily: "DM Sans, sans-serif",
                     fontSize: "0.8rem",
                     color: "rgba(255,255,255,0.5)",
-                    marginTop: "0.3rem",
-                    lineHeight: 1.4,
-                  }}
-                >
+                      marginTop: "0.45rem",
+                      lineHeight: 1.4,
+                    }}
+                  >
                   {stat.label}
                 </span>
               </div>

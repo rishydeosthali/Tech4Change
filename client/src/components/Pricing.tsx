@@ -1,14 +1,14 @@
 /* ============================================================
    TECH4CHANGE Pricing — Deep Space Tech / Mission Control
-   Website + separate AI product cards
+   Website pricing card
    ============================================================ */
 import { useEffect, useRef, useState } from "react";
-import { Check, Globe, Mic, UserPlus, Gift } from "lucide-react";
+import { Check, Globe } from "lucide-react";
 
 const websiteHeadline = {
-  label: "Branded website",
-  price: "$200–$250",
-  detail: "One-time build · unlimited pages",
+  label: "Professional website",
+  price: "$250",
+  detail: "$10 monthly fee",
 };
 
 const websiteIncludes = [
@@ -16,31 +16,9 @@ const websiteIncludes = [
   "Mobile-responsive, fast pages",
   "Contact forms & lead capture",
   "SEO-ready structure",
+  "Launch-ready setup included",
+  "We work on it until you like it",
 ];
-
-const voiceAgent = {
-  title: "AI voice agent",
-  price: "$200–$500",
-  period: "/month",
-  detail: "Based on call volume",
-  bullets: [
-    "24/7 answering & intelligent routing",
-    "Appointment booking & reminders",
-    "Custom voice and brand tone",
-  ],
-};
-
-const leadGeneration = {
-  title: "AI lead generation",
-  price: "$400",
-  period: "/month",
-  detail: "Full pipeline automation",
-  bullets: [
-    "Prospect discovery & enrichment",
-    "Automated nurture and follow-up",
-    "CRM handoff and lead scoring",
-  ],
-};
 
 export default function Pricing() {
   const [visible, setVisible] = useState(false);
@@ -64,121 +42,6 @@ export default function Pricing() {
     transform: visible ? "translateY(0)" : "translateY(40px)",
     transition: `all 0.6s ease ${delay}`,
   });
-
-  function AiServiceCard({
-    service,
-    icon: Icon,
-    featured,
-    delay,
-  }: {
-    service: typeof voiceAgent;
-    icon: typeof Mic;
-    featured: boolean;
-    delay: string;
-  }) {
-    return (
-      <div
-        className="rounded-xl overflow-hidden flex flex-col h-full"
-        style={{
-          background: featured
-            ? "linear-gradient(160deg, rgba(220,38,38,0.08) 0%, rgba(13,22,40,0.95) 50%)"
-            : "rgba(13, 22, 40, 0.8)",
-          border: featured ? "1px solid rgba(220,38,38,0.35)" : "1px solid rgba(220,38,38,0.15)",
-          boxShadow: featured ? "0 0 40px rgba(220,38,38,0.12), 0 8px 32px rgba(0,0,0,0.4)" : "none",
-          ...cardBase(delay),
-        }}
-      >
-        {featured && (
-          <div
-            className="flex items-center justify-center gap-2 py-2.5 text-xs font-bold"
-            style={{
-              fontFamily: "JetBrains Mono, monospace",
-              background: "rgba(220,38,38,0.15)",
-              color: accent,
-              letterSpacing: "0.08em",
-            }}
-          >
-            <Gift size={13} />
-            2-WEEK FREE TRIAL
-          </div>
-        )}
-
-        <div className="p-8 flex flex-col flex-1">
-          <div className="flex items-center gap-3 mb-6">
-            <div
-              className="w-11 h-11 rounded-lg flex items-center justify-center"
-              style={{ background: `${accent}20`, border: `1px solid ${accent}40` }}
-            >
-              <Icon size={22} style={{ color: accent }} />
-            </div>
-            <div>
-              <span className="section-label block" style={{ color: accent }}>
-                Monthly
-              </span>
-              <h3
-                className="text-2xl font-extrabold capitalize"
-                style={{ fontFamily: "Outfit, sans-serif", color: "#fff" }}
-              >
-                {service.title}
-              </h3>
-            </div>
-          </div>
-
-          <p className="text-sm mb-5" style={{ color: "rgba(255,255,255,0.5)", lineHeight: 1.65 }}>
-            <strong style={{ color: "rgba(255,255,255,0.85)" }}>Two weeks free</strong>, then billed monthly.
-            Cancel or adjust before the trial ends if it is not a fit.
-          </p>
-
-          <div className="mb-6 pb-6" style={{ borderBottom: "1px solid rgba(220,38,38,0.12)" }}>
-            <div className="flex items-end gap-1 flex-wrap">
-              <span
-                style={{
-                  fontFamily: "Outfit, sans-serif",
-                  fontWeight: 800,
-                  fontSize: "2rem",
-                  color: accent,
-                  lineHeight: 1,
-                }}
-              >
-                {service.price}
-              </span>
-              <span
-                style={{
-                  color: "rgba(255,255,255,0.4)",
-                  fontSize: "0.95rem",
-                  paddingBottom: "0.2rem",
-                }}
-              >
-                {service.period}
-              </span>
-            </div>
-            <p className="text-sm mt-2" style={{ color: "rgba(255,255,255,0.45)" }}>
-              {service.detail}
-            </p>
-          </div>
-
-          <ul className="space-y-3 flex-1">
-            {service.bullets.map((f) => (
-              <li key={f} className="flex items-start gap-2.5 text-sm">
-                <Check size={15} className="flex-shrink-0 mt-0.5" style={{ color: accent }} />
-                <span style={{ color: "rgba(255,255,255,0.7)" }}>{f}</span>
-              </li>
-            ))}
-          </ul>
-
-          <button
-            onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
-            className={`w-full mt-8 py-3.5 rounded-md text-sm font-bold transition-all duration-200 ${
-              featured ? "btn-teal" : "btn-ghost-teal"
-            }`}
-            style={{ fontFamily: "Outfit, sans-serif" }}
-          >
-            Schedule Free AI Consultation
-          </button>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <section id="pricing" className="py-24 relative" style={{ background: "#060B18" }}>
@@ -210,13 +73,19 @@ export default function Pricing() {
             className="text-4xl md:text-5xl font-extrabold mb-4"
             style={{ fontFamily: "Outfit, sans-serif", color: "#fff" }}
           >
-            Transparent Pricing,
+            Simple Pricing,
             <br />
-            <span className="text-teal-gradient">Real ROI</span>
+            <span className="text-teal-gradient">No Extra Layers</span>
           </h2>
+          <p
+            className="max-w-2xl mx-auto text-base"
+            style={{ color: "rgba(255,255,255,0.55)", lineHeight: 1.7 }}
+          >
+            One website package. $250 upfront plus a $10 monthly fee.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 gap-6 items-stretch max-w-3xl mx-auto">
           {/* Website */}
           <div
             className="rounded-xl overflow-hidden flex flex-col h-full"
@@ -235,14 +104,11 @@ export default function Pricing() {
                   <Globe size={22} style={{ color: accent }} />
                 </div>
                 <div>
-                  <span className="section-label block" style={{ color: accent }}>
-                    One-time
-                  </span>
                   <h3
                     className="text-2xl font-extrabold"
                     style={{ fontFamily: "Outfit, sans-serif", color: "#fff" }}
                   >
-                    Website
+                    Professional Website
                   </h3>
                 </div>
               </div>
@@ -283,20 +149,17 @@ export default function Pricing() {
                 className="w-full mt-8 py-3.5 rounded-md text-sm font-bold transition-all duration-200 btn-ghost-teal"
                 style={{ fontFamily: "Outfit, sans-serif" }}
               >
-                Discuss your website build
+                Discuss Your Website Build
               </button>
             </div>
           </div>
-
-          <AiServiceCard service={voiceAgent} icon={Mic} featured delay="0.1s" />
-          <AiServiceCard service={leadGeneration} icon={UserPlus} featured delay="0.15s" />
         </div>
 
         <p
           className="text-center mt-10 text-sm max-w-2xl mx-auto"
           style={{ color: "rgba(255,255,255,0.35)", fontFamily: "DM Sans, sans-serif" }}
         >
-          Onboarding support on every engagement · SOC 2 compliant · 99.9% uptime SLA on AI services
+          Clear pricing, mobile-friendly development, and direct collaboration from kickoff to launch
         </p>
       </div>
     </section>

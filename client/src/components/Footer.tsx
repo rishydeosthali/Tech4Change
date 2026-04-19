@@ -5,9 +5,8 @@
 
 const footerLinks = {
   Services: [
-    "AI Voice Agents",
-    "AI Lead Generation",
     "Website Development",
+    "SEO Foundations",
   ],
   Company: [
     "About Us",
@@ -17,6 +16,22 @@ const footerLinks = {
 
 export default function Footer() {
   const handleFooterLinkClick = (link: string) => {
+    const serviceTargets: Record<string, string> = {
+      "Website Development": "website-development",
+      "SEO Foundations": "seo-foundations",
+    };
+
+    const serviceTarget = serviceTargets[link];
+    if (serviceTarget) {
+      const el = document.querySelector(`#${serviceTarget}`);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+        return;
+      }
+      window.location.href = `/#${serviceTarget}`;
+      return;
+    }
+
     if (link === "About Us") {
       window.location.href = "/about-us";
       return;
@@ -51,8 +66,8 @@ export default function Footer() {
               className="text-sm"
               style={{ color: "rgba(255,255,255,0.45)", lineHeight: 1.8, maxWidth: "280px" }}
             >
-              Enterprise-grade AI for small businesses. Voice agents, review management, 
-              automation, and analytics — all in one platform.
+              Website design and development for small businesses that want a stronger
+              online presence and more qualified leads.
             </p>
 
           </div>
@@ -100,7 +115,7 @@ export default function Footer() {
             className="text-xs"
             style={{ color: "rgba(255,255,255,0.3)", fontFamily: "DM Sans, sans-serif" }}
           >
-            SOC 2 Certified · GDPR Compliant · 99.9% Uptime
+            Built for small business growth
           </p>
         </div>
       </div>

@@ -3,16 +3,15 @@
    Lead capture form with business type selection (FormSubmit POST)
    ============================================================ */
 import { useEffect, useRef, useState } from "react";
-import { Send, Phone, Mail, MapPin } from "lucide-react";
+import { Send, Phone, Mail, MapPin, Instagram } from "lucide-react";
 
 const businessTypes = [
-  "Restaurant / Food Service",
-  "Health & Wellness / Spa",
-  "Home Services (HVAC, Plumbing, etc.)",
-  "Retail / E-commerce",
-  "Professional Services (Legal, Accounting)",
-  "Auto Services",
+  "Barbershop / Salon",
+  "HVAC / Home Services",
   "Real Estate",
+  "Local Service Provider",
+  "Professional Services",
+  "Retail / E-commerce",
   "Other",
 ];
 
@@ -78,23 +77,25 @@ export default function Contact() {
               className="text-4xl md:text-5xl font-extrabold mb-6"
               style={{ fontFamily: "Outfit, sans-serif", color: "#fff", lineHeight: 1.1 }}
             >
-              Ready to Transform
+              Ready to Upgrade
               <br />
-              <span className="text-teal-gradient">Your Business?</span>
+              <span className="text-teal-gradient">Your Website?</span>
             </h2>
             <p
               className="text-base mb-10"
               style={{ color: "rgba(255,255,255,0.55)", lineHeight: 1.8 }}
             >
-              Fill out the form and a Tech4Change specialist will reach out within 24 hours to discuss your business
-              goals and build a custom AI plan — completely free.
+              Fill out the form and a Tech4Change specialist will reach out within 24 hours to discuss your business,
+              website goals, and the kind of online presence you want to build. We primarily work with
+              barbershops, HVAC companies, real estate teams, and local service providers.
             </p>
 
             {/* Contact details */}
             <div className="space-y-5">
               {[
-                { icon: Phone, label: "Phone", value: "(737)-235-3170" },
-                { icon: Mail, label: "Email", value: "tech4change76@gmail.com" },
+                { icon: Phone, label: "Phone", value: "(737)-235-3170", href: "tel:7372353170" },
+                { icon: Mail, label: "Email", value: "tech4change76@gmail.com", href: "mailto:tech4change76@gmail.com" },
+                { icon: Instagram, label: "Instagram", value: "@tech.4.change1", href: "https://www.instagram.com/tech.4.change1/" },
                 { icon: MapPin, label: "Serving", value: "All 50 States · Remote Setup" },
               ].map((item) => {
                 const Icon = item.icon;
@@ -121,7 +122,22 @@ export default function Contact() {
                       >
                         {item.label}
                       </div>
-                      <div style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.95rem" }}>{item.value}</div>
+                      {("href" in item) ? (
+                        <a
+                          href={item.href}
+                          onClick={(e) => {
+                            if (item.label === "Phone" && item.href) {
+                              e.preventDefault();
+                              window.location.href = item.href;
+                            }
+                          }}
+                          style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.95rem" }}
+                        >
+                          {item.value}
+                        </a>
+                      ) : (
+                        <div style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.95rem" }}>{item.value}</div>
+                      )}
                     </div>
                   </div>
                 );
@@ -131,6 +147,7 @@ export default function Contact() {
 
           {/* Right: Form */}
           <div
+            id="consultation-form"
             style={{
               opacity: visible ? 1 : 0,
               transform: visible ? "translateX(0)" : "translateX(30px)",
@@ -150,7 +167,7 @@ export default function Contact() {
                 method="POST"
                 className="space-y-5"
               >
-                <input type="hidden" name="_subject" value="New Free AI Consultation Request" />
+                <input type="hidden" name="_subject" value="New Website Consultation Request" />
                 <input type="hidden" name="_captcha" value="false" />
                 {thanksUrl ? <input type="hidden" name="_next" value={thanksUrl} /> : null}
 
@@ -257,12 +274,12 @@ export default function Contact() {
                     className="block mb-1.5 text-sm font-medium"
                     style={{ color: "rgba(255,255,255,0.7)", fontFamily: "DM Sans, sans-serif" }}
                   >
-                    What's your biggest challenge?
+                    What do you want your website to help with?
                   </label>
                   <textarea
                     name="message"
                     rows={3}
-                    placeholder="e.g., Missing calls after hours, not enough reviews, too much admin work..."
+                    placeholder="e.g., Need a new site, want more leads, current website feels outdated..."
                     style={{ ...inputStyle, resize: "vertical" }}
                     onFocus={(e) => (e.target.style.borderColor = "rgba(220,38,38,0.5)")}
                     onBlur={(e) => (e.target.style.borderColor = "rgba(220,38,38,0.15)")}
@@ -270,7 +287,7 @@ export default function Contact() {
                 </div>
 
                 <button type="submit" className="btn-teal w-full py-4 rounded-md text-base flex items-center justify-center gap-2">
-                  Get My Free AI Consultation
+                  Get My Free Website Consultation
                   <Send size={16} />
                 </button>
 

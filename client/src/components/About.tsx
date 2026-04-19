@@ -14,9 +14,9 @@ const values = [
   },
   {
     icon: Lightbulb,
-    title: "AI That Just Works",
+    title: "Professional Build Quality",
     description:
-      "No PhD required. Our AI is configured, deployed, and maintained by our team. You get enterprise-grade technology without the enterprise-grade complexity.",
+      "No confusing handoff. We plan, design, build, and launch your website so you get a polished result without managing the technical details yourself.",
   },
   {
     icon: Shield,
@@ -28,14 +28,14 @@ const values = [
     icon: HeartHandshake,
     title: "Partnership, Not Software",
     description:
-      "We don't just hand you a login and disappear. Every client gets a dedicated success manager, monthly performance reviews, and continuous AI optimization.",
+      "We do not disappear after delivery. Every project is built with collaboration, revision rounds, and practical support so your site keeps working for your business.",
   },
 ];
 
 const trustItems = [
   // for future use: { value: "500+", label: "Businesses Served" },
   { value: "4.9★", label: "Average Rating" },
-  { value: "48hrs", label: "Average Setup Time" },
+  { value: "24hrs", label: "Average Setup Time" },
   { value: "99.9%", label: "Uptime SLA" },
 ];
 
@@ -90,17 +90,15 @@ export default function About() {
               className="text-base mb-6"
               style={{ color: "rgba(255,255,255,0.6)", lineHeight: 1.8 }}
             >
-              Large corporations have had access to AI-powered customer service, reputation 
-              management, and business intelligence for years. Small businesses have been 
-              left behind — until now.
+              Great websites have become the front door for modern businesses, but too many
+              small teams are still stuck with outdated pages, confusing builders, or no site at all.
             </p>
             <p
               className="text-base mb-8"
               style={{ color: "rgba(255,255,255,0.6)", lineHeight: 1.8 }}
             >
-              Tech4Change was founded with a single mission: to give every small business 
-              owner the same AI advantages that Fortune 500 companies enjoy, at a price 
-              that makes sense for Main Street.
+              Tech4Change was founded to give small businesses access to clean, effective
+              websites that look professional, communicate clearly, and help turn attention into leads.
             </p>
 
             {/* Trust stats */}

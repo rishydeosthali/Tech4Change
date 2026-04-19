@@ -3,34 +3,17 @@
    4-service grid with glowing cards, images, and feature lists
    ============================================================ */
 import { useEffect, useRef, useState } from "react";
-import { Mic, Code2, UserPlus, ArrowRight } from "lucide-react";
+import { Code2, Search, ArrowRight } from "lucide-react";
 
-const VOICE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663460370702/ecG8FietAg7LHPWEcKYES2/ai-voice-agent-6wuLGP6P4BKouUxMr6hyih.webp";
 const WEBSITE_IMG = "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1400&q=80";
-const LEADS_IMG =
-  "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=80";
+const SEO_IMG = "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&w=1400&q=80";
 
 const services = [
   {
-    icon: Mic,
-    title: "AI Voice Agents",
-    tagline: "Never miss a call again",
-    description:
-      "Deploy intelligent voice agents that answer calls 24/7, book appointments, handle FAQs, and escalate complex issues — all in a natural, human-like voice.",
-    features: [
-      "24/7 call answering & routing",
-      "Appointment scheduling & reminders",
-      "Custom voice & personality",
-      "CRM integration",
-    ],
-    image: VOICE_IMG,
-    accent: "#DC2626",
-    badge: "Most Popular",
-  },
-  {
+    id: "website-development",
     icon: Code2,
     title: "Website Development",
-    tagline: "Done-for-you website builds",
+    tagline: "Built fast and clean",
     description:
       "We design and build high-converting, mobile-friendly websites for your business, so you can launch faster without managing developers or technical setup.",
     features: [
@@ -44,20 +27,21 @@ const services = [
     badge: "Popular",
   },
   {
-    icon: UserPlus,
-    title: "AI Lead Generation",
-    tagline: "Fill your pipeline on autopilot",
+    id: "seo-foundations",
+    icon: Search,
+    title: "SEO Foundations",
+    tagline: "Help people find you online",
     description:
-      "AI-powered outreach and qualification that finds prospects, starts conversations, and hands off warm leads — so your sales team spends time closing, not chasing.",
+      "We set up the on-page structure your website needs to rank better locally, load well, and support long-term search visibility.",
     features: [
-      "Targeted prospect discovery & enrichment",
-      "Automated follow-ups & nurture sequences",
-      "Lead scoring & handoff to your CRM",
-      "Reporting on pipeline and conversion",
+      "Title tags and page structure",
+      "Local search best practices",
+      "Fast-loading page setup",
+      "Lead-focused content flow",
     ],
-    image: LEADS_IMG,
+    image: SEO_IMG,
     accent: "#DC2626",
-    badge: "New",
+    badge: "Included",
   },
 ];
 
@@ -78,6 +62,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
 
   return (
     <div
+      id={service.id}
       ref={ref}
       className="card-glow rounded-xl overflow-hidden flex flex-col"
       style={{
@@ -186,7 +171,7 @@ export default function Services() {
   }, []);
 
   return (
-    <section id="services" className="py-24 relative" style={{ background: "#060B18" }}>
+    <section id="services" className="py-28 relative" style={{ background: "#060B18" }}>
       {/* Subtle grid */}
       <div className="absolute inset-0 dot-grid opacity-20 pointer-events-none" />
 
@@ -194,7 +179,7 @@ export default function Services() {
         {/* Header */}
         <div
           ref={ref}
-          className="mb-16"
+          className="mb-18 md:mb-20"
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(20px)",
@@ -206,7 +191,7 @@ export default function Services() {
             className="text-4xl md:text-5xl font-extrabold mb-4"
             style={{ fontFamily: "Outfit, sans-serif", color: "#fff" }}
           >
-            AI Services Built for
+            Website Services Built for
             <br />
             <span className="text-teal-gradient">Small Business Success</span>
           </h2>
@@ -214,13 +199,14 @@ export default function Services() {
             className="max-w-2xl text-base"
             style={{ color: "rgba(255,255,255,0.55)", lineHeight: 1.7 }}
           >
-            From AI voice agents and lead generation to a done-for-you website, Tech4Change
-            covers the touchpoints that grow your business — so your team can focus on what they do best.
+            From brand-new launches to redesigns, Tech4Change builds the website foundation
+            your business needs to look professional and capture more leads online for barbershops,
+            HVAC companies, real estate businesses, and local service providers.
           </p>
         </div>
 
         {/* Services grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, i) => (
             <ServiceCard key={service.title} service={service} index={i} />
           ))}

@@ -9,7 +9,8 @@ const navLinks = [
   { label: "Services", href: "#services" },
   { label: "How It Works", href: "#how-it-works" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Testimonials", href: "#testimonials" },
+  { label: "Reviews", href: "#testimonials" },
+  { label: "About Us", href: "/about-us" },
 ];
 
 export default function Navbar() {
@@ -103,7 +104,7 @@ export default function Navbar() {
               className="btn-teal px-3 py-2 rounded-md text-[11px] sm:text-xs md:text-sm font-semibold leading-snug text-center"
             >
               {/* for future use: Get Started Free */}
-              Schedule Free AI Consultation
+              Schedule Free Website Consultation
             </button>
           </div>
 
@@ -146,7 +147,7 @@ export default function Navbar() {
               className="btn-teal mt-2 px-5 py-3 rounded-md text-sm font-semibold w-full"
             >
               {/* for future use: Get Started Free */}
-              Schedule Free AI Consultation
+              Schedule Free Website Consultation
             </button>
           </div>
         </div>

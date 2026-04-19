@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
+  "engines": {
+    "node": ">=20.19.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "check": "tsc --noEmit",
     "format": "prettier --write .",
-    "test": "vitest run",
+    "test": "vitest run --passWithNoTests",
     "preview": "vite preview"
   },
   "dependencies": {

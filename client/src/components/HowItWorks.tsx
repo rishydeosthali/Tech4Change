@@ -11,25 +11,25 @@ const steps = [
     icon: MessageSquare,
     title: "Tell Us About Your Business",
     description:
-      "Answer a few simple questions about your business type, customer volume, and goals. No technical knowledge needed — our onboarding takes under 15 minutes.",
-    detail: "We configure your AI based on your industry, tone of voice, and specific workflows.",
+      "Answer a few simple questions about your business, goals, style, and the kind of customers you want to attract.",
+    detail: "We turn your business details into a clear site plan, layout direction, and content structure.",
   },
   {
     number: "02",
     icon: Settings2,
-    title: "We Deploy Your AI Stack",
+    title: "We Design and Build",
     // for future use: description included "… integrated with your existing tools."
     description:
-      "Our team sets up your AI voice agent, review system, and automation workflows — fully customized to your brand.",
-    detail: "Live within 48 hours. We handle all the technical setup, testing, and training.",
+      "Our team handles the design, development, mobile responsiveness, and lead capture setup so you do not have to manage the technical work.",
+    detail: "You get a fast-moving build process with review checkpoints before launch.",
   },
   {
     number: "03",
     icon: TrendingUp,
-    title: "Watch Your Business Grow",
+    title: "Launch with Confidence",
     description:
-      "Your AI works around the clock — answering calls, collecting reviews, and automating tasks. Track everything in your real-time dashboard.",
-    detail: "Monthly performance reviews and continuous AI optimization included.",
+      "Once the site is live, your business has a stronger online presence built to convert visitors into calls, form submissions, and booked work.",
+    detail: "We can keep refining your site content and pages as your business grows.",
   },
 ];
 
@@ -79,13 +79,13 @@ export default function HowItWorks() {
             style={{ fontFamily: "Outfit, sans-serif", color: "#fff" }}
           >
             Up and Running in{" "}
-            <span className="text-teal-gradient">48 Hours</span>
+            <span className="text-teal-gradient">Three Simple Steps</span>
           </h2>
           <p
             className="max-w-xl mx-auto text-base"
             style={{ color: "rgba(255,255,255,0.55)", lineHeight: 1.7 }}
           >
-            Three simple steps from sign-up to a fully operational AI-powered business.
+            A straightforward website process from kickoff to launch.
           </p>
         </div>
 
@@ -183,7 +183,7 @@ export default function HowItWorks() {
             Get Started in 15 Minutes
           </button>
           <p className="mt-3 text-xs" style={{ color: "rgba(255,255,255,0.35)", fontFamily: "DM Sans, sans-serif" }}>
-            No credit card required · Pay after we implement your AI infrastructure
+            No pressure · No confusing tech stack · Just a clear path to launch
           </p>
         </div>
       </div>

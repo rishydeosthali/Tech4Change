@@ -23,6 +23,10 @@ export default function Hero() {
     return () => clearTimeout(timer);
   }, []);
 
+  const scrollToShowcase = () => {
+    document.querySelector("#showcase")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   const scrollToServices = () => {
     document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -218,11 +222,11 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <button
-        onClick={scrollToServices}
+        onClick={scrollToShowcase}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 opacity-50 hover:opacity-100 transition-opacity"
         style={{ color: "#DC2626" }}
       >
-        <span className="section-label text-xs">Scroll</span>
+        <span className="section-label text-xs">See real sites</span>
         <ChevronDown size={20} className="animate-bounce" />
       </button>
     </section>

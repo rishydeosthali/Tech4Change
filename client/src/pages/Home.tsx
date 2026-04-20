@@ -13,7 +13,6 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
-import WebsiteShowcase from "@/components/WebsiteShowcase";
 
 export default function Home() {
   return (
@@ -27,7 +26,6 @@ export default function Home() {
       <Testimonials />
       <About />
       <Contact />
-      <WebsiteShowcase />
       <CTABanner />
       <Footer />
     </div>

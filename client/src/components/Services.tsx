@@ -8,6 +8,11 @@ import { Code2, Search, ArrowRight } from "lucide-react";
 const WEBSITE_IMG = "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1400&q=80";
 const SEO_IMG = "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&w=1400&q=80";
 
+const sitePeekImages = [
+  { src: "/website-showcase-1.png", alt: "Website homepage we built for Trappin Cutz barbershop" },
+  { src: "/website-showcase-2.png", alt: "Website homepage we built for Blessed Style barbershop" },
+];
+
 const services = [
   {
     id: "website-development",
@@ -171,47 +176,80 @@ export default function Services() {
   }, []);
 
   return (
-    <section id="services" className="py-28 relative" style={{ background: "#060B18" }}>
-      {/* Subtle grid */}
+    <div className="relative" style={{ background: "#060B18" }}>
       <div className="absolute inset-0 dot-grid opacity-20 pointer-events-none" />
 
-      <div className="container relative z-10">
-        {/* Header */}
-        <div
-          ref={ref}
-          className="mb-18 md:mb-20"
-          style={{
-            opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0)" : "translateY(20px)",
-            transition: "all 0.6s ease",
-          }}
-        >
-          <span className="section-label block mb-3">// What We Offer</span>
+      {/* Websites for small businesses — intro + offerings (no client site screenshots here) */}
+      <section id="services" className="relative z-10 scroll-mt-24 pt-28 pb-16 md:pb-20">
+        <div className="container">
+          <div
+            ref={ref}
+            style={{
+              opacity: visible ? 1 : 0,
+              transform: visible ? "translateY(0)" : "translateY(20px)",
+              transition: "all 0.6s ease",
+            }}
+          >
+            <span className="section-label block mb-3">// What We Offer</span>
+            <h2
+              className="text-4xl md:text-5xl font-extrabold mb-6 md:mb-8"
+              style={{ fontFamily: "Outfit, sans-serif", color: "#fff" }}
+            >
+              Websites for
+              <br />
+              <span className="text-teal-gradient">small businesses</span>
+            </h2>
+            <p
+              className="max-w-2xl text-base mb-14 md:mb-16"
+              style={{ color: "rgba(255,255,255,0.55)", lineHeight: 1.7 }}
+            >
+              From brand-new launches to redesigns, Tech4Change builds the website foundation
+              your business needs to look professional and capture more leads online for barbershops,
+              HVAC companies, real estate businesses, and local service providers.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {services.map((service, i) => (
+                <ServiceCard key={service.title} service={service} index={i} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Client builds — separate section; showcase images live only here */}
+      <section
+        id="showcase"
+        className="relative z-10 scroll-mt-24 pt-6 md:pt-8 pb-28 md:pb-32"
+        style={{
+          borderTop: "1px solid rgba(220,38,38,0.08)",
+          background: "linear-gradient(180deg, rgba(7,13,28,0.45) 0%, rgba(6,11,24,0.15) 100%)",
+        }}
+        aria-labelledby="site-peek-heading"
+      >
+        <div className="container">
           <h2
-            className="text-4xl md:text-5xl font-extrabold mb-4"
+            id="site-peek-heading"
+            className="text-3xl md:text-4xl font-extrabold mb-6 md:mb-8"
             style={{ fontFamily: "Outfit, sans-serif", color: "#fff" }}
           >
-            Website Services Built for
-            <br />
-            <span className="text-teal-gradient">Small Business Success</span>
+            A peek into the sites we build
           </h2>
-          <p
-            className="max-w-2xl text-base"
-            style={{ color: "rgba(255,255,255,0.55)", lineHeight: 1.7 }}
-          >
-            From brand-new launches to redesigns, Tech4Change builds the website foundation
-            your business needs to look professional and capture more leads online for barbershops,
-            HVAC companies, real estate businesses, and local service providers.
-          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            {sitePeekImages.map((img) => (
+              <img
+                key={img.src}
+                src={img.src}
+                alt={img.alt}
+                className="w-full rounded-2xl object-cover object-top"
+                style={{ aspectRatio: "16 / 10" }}
+                loading="lazy"
+                decoding="async"
+              />
+            ))}
+          </div>
         </div>
-
-        {/* Services grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {services.map((service, i) => (
-            <ServiceCard key={service.title} service={service} index={i} />
-          ))}
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

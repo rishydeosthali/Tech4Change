@@ -8,7 +8,7 @@ import { Check, Globe } from "lucide-react";
 const websiteHeadline = {
   label: "Professional website",
   price: "$250",
-  detail: "$10 monthly fee",
+  detail: "$20 yearly fee",
 };
 
 const websiteIncludes = [
@@ -81,7 +81,7 @@ export default function Pricing() {
             className="max-w-2xl mx-auto text-base"
             style={{ color: "rgba(255,255,255,0.55)", lineHeight: 1.7 }}
           >
-            One website package. $250 upfront plus a $10 monthly fee.
+            One website package. $250 upfront plus a $20 yearly fee.
           </p>
         </div>
 

@@ -10,7 +10,8 @@ const offers = [
     icon: Phone,
     title: "Voice Agents",
     label: "Communications",
-    detail: "Scoped to the calls and messages you want covered.",
+    price: "$250",
+    detail: "$20 yearly fee",
     includes: [
       "Answer, qualify, book, and follow up",
       "Inbound and outbound conversations",
@@ -24,7 +25,8 @@ const offers = [
     icon: Workflow,
     title: "AI Workflows",
     label: "Process",
-    detail: "Scoped to the steps that stall after the conversation.",
+    price: "$250",
+    detail: "$20 yearly fee",
     includes: [
       "Trigger from a call, text, or form",
       "Route to a booking, ticket, or person",
@@ -97,7 +99,7 @@ export default function Pricing() {
             className="max-w-2xl mx-auto text-base"
             style={{ color: "rgba(255,255,255,0.55)", lineHeight: 1.7 }}
           >
-            Two engagements. Pricing is scoped after we map the conversations and the process.
+            Each engagement is $250 upfront plus a $20 yearly fee.
           </p>
         </div>
 
@@ -134,7 +136,7 @@ export default function Pricing() {
 
                   <div className="mb-6 pb-6" style={{ borderBottom: "1px solid rgba(220,38,38,0.12)" }}>
                     <p
-                      className="text-sm mb-2"
+                      className="text-sm mb-1"
                       style={{
                         fontFamily: "JetBrains Mono, monospace",
                         color: accent,
@@ -144,7 +146,18 @@ export default function Pricing() {
                     >
                       {offer.label}
                     </p>
-                    <p className="text-sm" style={{ color: "rgba(255,255,255,0.55)", lineHeight: 1.6 }}>
+                    <span
+                      style={{
+                        fontFamily: "Outfit, sans-serif",
+                        fontWeight: 800,
+                        fontSize: "2.25rem",
+                        color: accent,
+                        lineHeight: 1,
+                      }}
+                    >
+                      {offer.price}
+                    </span>
+                    <p className="text-sm mt-2" style={{ color: "rgba(255,255,255,0.45)" }}>
                       {offer.detail}
                     </p>
                   </div>

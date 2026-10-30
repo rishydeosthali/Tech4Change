@@ -8,15 +8,15 @@ import { Shield, Users, Lightbulb, HeartHandshake } from "lucide-react";
 const values = [
   {
     icon: Users,
-    title: "Small Business First",
+    title: "Built Around the Work",
     description:
-      "We built Tech4Change specifically for small businesses — not as an afterthought, but as our entire focus. Every feature is designed for the constraints and opportunities of independent operators.",
+      "We start from the conversations and the steps that stall a team. The agent and the workflow are shaped to that process, not dropped in as a generic tool.",
   },
   {
     icon: Lightbulb,
-    title: "Professional Build Quality",
+    title: "A Person Still in the Loop",
     description:
-      "No confusing handoff. We plan, design, build, and launch your website so you get a polished result without managing the technical details yourself.",
+      "The agent handles the repeatable conversation. When a step needs judgment, the workflow stops and passes the full context to someone on your team.",
   },
   {
     icon: Shield,
@@ -28,14 +28,14 @@ const values = [
     icon: HeartHandshake,
     title: "Partnership, Not Software",
     description:
-      "We do not disappear after delivery. Every project is built with collaboration, revision rounds, and practical support so your site keeps working for your business.",
+      "We stay after the first version. Real calls and real jobs show what to tighten, and we keep the agent and the workflow aligned with how the team works.",
   },
 ];
 
 const trustItems = [
   // for future use: { value: "500+", label: "Businesses Served" },
   { value: "4.9★", label: "Average Rating" },
-  { value: "24hrs", label: "Average Setup Time" },
+  { value: "24hrs", label: "First Response Window" },
   { value: "99.9%", label: "Uptime SLA" },
 ];
 
@@ -82,23 +82,23 @@ export default function About() {
               className="text-4xl md:text-5xl font-extrabold mb-6"
               style={{ fontFamily: "Outfit, sans-serif", color: "#fff", lineHeight: 1.1 }}
             >
-              Leveling the
+              Capacity for
               <br />
-              <span className="text-teal-gradient">Playing Field</span>
+              <span className="text-teal-gradient">Every Conversation</span>
             </h2>
             <p
               className="text-base mb-6"
               style={{ color: "rgba(255,255,255,0.6)", lineHeight: 1.8 }}
             >
-              Great websites have become the front door for modern businesses, but too many
-              small teams are still stuck with outdated pages, confusing builders, or no site at all.
+              Calls, follow-ups, and status updates pile up faster than a team can clear them.
+              The work stalls in voicemail, inboxes, and handoffs that nobody owns.
             </p>
             <p
               className="text-base mb-8"
               style={{ color: "rgba(255,255,255,0.6)", lineHeight: 1.8 }}
             >
-              Tech4Change was founded to give small businesses access to clean, effective
-              websites that look professional, communicate clearly, and help turn attention into leads.
+              Tech4Change gives teams voice agents for the conversation and AI workflows
+              for the process, so routine communication and the steps after it keep moving.
             </p>
 
             {/* Trust stats */}

@@ -48,9 +48,9 @@ export default function CTABanner() {
             maxWidth: "800px",
           }}
         >
-          Ready to Launch a Site
+          Ready to Cover
           <br />
-          <span className="text-teal-gradient">That Feels Professional?</span>
+          <span className="text-teal-gradient">the Conversation and the Work?</span>
         </h2>
         <p
           className="text-base md:text-lg mb-12 md:mb-16 mx-auto max-w-xl px-2"
@@ -59,7 +59,7 @@ export default function CTABanner() {
             lineHeight: 1.9,
           }}
         >
-          Build a website that looks credible, works on every screen, and helps visitors become customers.
+          Put a voice agent on the calls and an AI workflow on the steps that follow, so routine work keeps moving.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-5 md:gap-8 justify-center items-center">
@@ -68,7 +68,7 @@ export default function CTABanner() {
             className="btn-amber px-10 py-4 md:py-5 rounded-md text-base flex items-center gap-2.5"
           >
             {/* for future use: Start Free 14-Day Trial */}
-            Schedule Free Website Consultation
+            Schedule a Workflow Conversation
             <ArrowRight size={18} />
           </button>
           <button
@@ -83,7 +83,7 @@ export default function CTABanner() {
           className="mt-8 md:mt-12 text-xs md:text-sm leading-relaxed max-w-2xl mx-auto"
           style={{ color: "rgba(255,255,255,0.3)", fontFamily: "DM Sans, sans-serif" }}
         >
-          No pressure · Fast turnaround · Built around your business goals
+          No pressure · Scoped to your process · A person in the loop when it matters
         </p>
       </div>
     </section>

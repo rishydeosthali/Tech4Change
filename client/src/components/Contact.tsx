@@ -6,12 +6,11 @@ import { useEffect, useRef, useState } from "react";
 import { Send, Phone, Mail, MapPin, Instagram } from "lucide-react";
 
 const businessTypes = [
-  "Barbershop / Salon",
-  "HVAC / Home Services",
-  "Real Estate",
-  "Local Service Provider",
+  "Home and Field Services",
+  "Clinics and Care",
   "Professional Services",
-  "Retail / E-commerce",
+  "Sales and Scheduling",
+  "Operations and Support",
   "Other",
 ];
 
@@ -77,17 +76,16 @@ export default function Contact() {
               className="text-4xl md:text-5xl font-extrabold mb-6"
               style={{ fontFamily: "Outfit, sans-serif", color: "#fff", lineHeight: 1.1 }}
             >
-              Ready to Upgrade
+              Tell Us Where
               <br />
-              <span className="text-teal-gradient">Your Website?</span>
+              <span className="text-teal-gradient">the Work Stalls</span>
             </h2>
             <p
               className="text-base mb-10"
               style={{ color: "rgba(255,255,255,0.55)", lineHeight: 1.8 }}
             >
-              Fill out the form and a Tech4Change specialist will reach out within 24 hours to discuss your business,
-              website goals, and the kind of online presence you want to build. We primarily work with
-              barbershops, HVAC companies, real estate teams, and local service providers.
+              Fill out the form and a Tech4Change specialist will reach out within 24 hours to map
+              the conversations you want covered and the process you want moving after them.
             </p>
 
             {/* Contact details */}
@@ -167,7 +165,7 @@ export default function Contact() {
                 method="POST"
                 className="space-y-5"
               >
-                <input type="hidden" name="_subject" value="New Website Consultation Request" />
+                <input type="hidden" name="_subject" value="New Voice and Workflow Conversation" />
                 <input type="hidden" name="_captcha" value="false" />
                 {thanksUrl ? <input type="hidden" name="_next" value={thanksUrl} /> : null}
 
@@ -274,12 +272,12 @@ export default function Contact() {
                     className="block mb-1.5 text-sm font-medium"
                     style={{ color: "rgba(255,255,255,0.7)", fontFamily: "DM Sans, sans-serif" }}
                   >
-                    What do you want your website to help with?
+                    What should the agent or workflow handle?
                   </label>
                   <textarea
                     name="message"
                     rows={3}
-                    placeholder="e.g., Need a new site, want more leads, current website feels outdated..."
+                    placeholder="e.g., Missed calls after hours, slow follow-up, jobs stuck waiting on a person..."
                     style={{ ...inputStyle, resize: "vertical" }}
                     onFocus={(e) => (e.target.style.borderColor = "rgba(220,38,38,0.5)")}
                     onBlur={(e) => (e.target.style.borderColor = "rgba(220,38,38,0.15)")}
@@ -287,7 +285,7 @@ export default function Contact() {
                 </div>
 
                 <button type="submit" className="btn-teal w-full py-4 rounded-md text-base flex items-center justify-center gap-2">
-                  Get My Free Website Consultation
+                  Schedule a Workflow Conversation
                   <Send size={16} />
                 </button>
 

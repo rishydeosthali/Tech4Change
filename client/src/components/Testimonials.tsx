@@ -10,25 +10,25 @@ const testimonials = [
     name: "Marcus Reed",
     business: "Reed Fade Studio",
     rating: 5,
-    text: "The new website made our barbershop look way more professional. Clients can finally find us easily and book without calling back and forth.",
+    text: "The voice agent answers when we are with a client and books the next appointment. We stopped losing calls that used to go to voicemail.",
   },
   {
     name: "Angela Torres",
     business: "Torres HVAC",
     rating: 5,
-    text: "We needed something simple, fast, and clean. Tech4Change gave us a website that actually brings in leads and explains our services clearly.",
+    text: "After-hours calls get qualified and turned into a job on the board. The workflow notifies the tech on call instead of sitting in a voicemail box.",
   },
   {
     name: "Darren Cole",
     business: "Cole Realty Group",
     rating: 4,
-    text: "Our old site felt outdated. The new one looks polished and modern, and sellers have mentioned that it made us look more established.",
+    text: "Inbound inquiries get a first conversation right away, then the workflow routes serious ones to an agent with the details already captured.",
   },
   {
     name: "Lisa Nguyen",
     business: "Nguyen Home Services",
     rating: 4,
-    text: "The process was easy and we liked being able to keep refining things until the site felt right for our business. It definitely looks better than what we had before.",
+    text: "Follow-ups that used to depend on someone remembering now move on their own. A person still steps in when a job needs a judgment call.",
   },
 ];
 
@@ -143,7 +143,7 @@ export default function Testimonials() {
             className="max-w-xl mx-auto text-base"
             style={{ color: "rgba(255,255,255,0.55)", lineHeight: 1.7 }}
           >
-            Small businesses trust Tech4Change to power their growth.
+            Teams use Tech4Change to cover the conversation and keep the work moving.
           </p>
 
           <div className="flex items-center justify-center gap-2 mt-6 flex-wrap">

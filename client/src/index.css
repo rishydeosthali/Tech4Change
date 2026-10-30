@@ -240,19 +240,4 @@
   .text-amber-brand {
     color: #EF4444;
   }
-
-  /* Live indicator pulse */
-  .live-dot {
-    width: 8px;
-    height: 8px;
-    background: #DC2626;
-    border-radius: 50%;
-    box-shadow: 0 0 8px #DC2626;
-    animation: pulse-dot 2s ease-in-out infinite;
-  }
-
-  @keyframes pulse-dot {
-    0%, 100% { opacity: 1; box-shadow: 0 0 8px #DC2626; }
-    50% { opacity: 0.5; box-shadow: 0 0 16px #DC2626; }
-  }
 }

@@ -9,27 +9,26 @@ const steps = [
   {
     number: "01",
     icon: MessageSquare,
-    title: "Tell Us About Your Business",
+    title: "Map the Process",
     description:
-      "Answer a few simple questions about your business, goals, style, and the kind of customers you want to attract.",
-    detail: "We turn your business details into a clear site plan, layout direction, and content structure.",
+      "We find the conversations and the steps that stall work: missed calls, slow follow-up, and jobs sitting in an inbox.",
+    detail: "You leave with a clear picture of the trigger, the route, and where a person still needs to step in.",
   },
   {
     number: "02",
     icon: Settings2,
-    title: "We Design and Build",
-    // for future use: description included "… integrated with your existing tools."
+    title: "Design the Agent and the Workflow",
     description:
-      "Our team handles the design, development, mobile responsiveness, and lead capture setup so you do not have to manage the technical work.",
-    detail: "You get a fast-moving build process with review checkpoints before launch.",
+      "The voice agent handles the conversation. The workflow routes the request, does the repeatable steps, and pauses for a person when it should.",
+    detail: "Booking, tickets, updates, and notifications are wired to the way your team already works.",
   },
   {
     number: "03",
     icon: TrendingUp,
-    title: "Launch with Confidence",
+    title: "Run It and Tighten It",
     description:
-      "Once the site is live, your business has a stronger online presence built to convert visitors into calls, form submissions, and booked work.",
-    detail: "We can keep refining your site content and pages as your business grows.",
+      "We put the agent and the workflow into daily use, then adjust them as real calls and jobs come through.",
+    detail: "Each pass checks that the step actually finished before the job moves on.",
   },
 ];
 
@@ -85,7 +84,7 @@ export default function HowItWorks() {
             className="max-w-xl mx-auto text-base"
             style={{ color: "rgba(255,255,255,0.55)", lineHeight: 1.7 }}
           >
-            A straightforward website process from kickoff to launch.
+            From the first conversation to a job that keeps moving.
           </p>
         </div>
 
@@ -183,7 +182,7 @@ export default function HowItWorks() {
             Get Started in 15 Minutes
           </button>
           <p className="mt-3 text-xs" style={{ color: "rgba(255,255,255,0.35)", fontFamily: "DM Sans, sans-serif" }}>
-            No pressure · No confusing tech stack · Just a clear path to launch
+            No pressure · A clear map of the process · A person in the loop when it matters
           </p>
         </div>
       </div>

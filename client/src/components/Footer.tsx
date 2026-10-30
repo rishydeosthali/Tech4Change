@@ -5,8 +5,8 @@
 
 const footerLinks = {
   Services: [
-    "Website Development",
-    "SEO Foundations",
+    "Voice Agents",
+    "AI Workflows",
   ],
   Company: [
     "About Us",
@@ -17,8 +17,8 @@ const footerLinks = {
 export default function Footer() {
   const handleFooterLinkClick = (link: string) => {
     const serviceTargets: Record<string, string> = {
-      "Website Development": "website-development",
-      "SEO Foundations": "seo-foundations",
+      "Voice Agents": "voice-agents",
+      "AI Workflows": "ai-workflows",
     };
 
     const serviceTarget = serviceTargets[link];
@@ -66,8 +66,8 @@ export default function Footer() {
               className="text-sm"
               style={{ color: "rgba(255,255,255,0.45)", lineHeight: 1.8, maxWidth: "280px" }}
             >
-              Website design and development for small businesses that want a stronger
-              online presence and more qualified leads.
+              Agentic voice agents for communication and AI workflows that keep
+              requests moving through the process.
             </p>
 
           </div>
@@ -115,7 +115,7 @@ export default function Footer() {
             className="text-xs"
             style={{ color: "rgba(255,255,255,0.3)", fontFamily: "DM Sans, sans-serif" }}
           >
-            Built for small business growth
+            Built for conversations and the work after them
           </p>
         </div>
       </div>

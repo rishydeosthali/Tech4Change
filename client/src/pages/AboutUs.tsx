@@ -2,19 +2,19 @@ import Footer from "@/components/Footer";
 
 const pillars = [
   {
-    title: "Small Business Focused",
+    title: "Conversations Covered",
     description:
-      "We build practical websites for local businesses that need real results, not agency bloat.",
+      "Voice agents answer, qualify, book, and follow up so calls and messages do not sit until someone is free.",
   },
   {
-    title: "Done-For-You Execution",
+    title: "Processes That Keep Moving",
     description:
-      "From strategy to launch, we handle the website work so you can stay focused on running your business.",
+      "AI workflows route the request, do the repeatable steps, and hand off with context when a person needs to decide.",
   },
   {
-    title: "Growth You Can Measure",
+    title: "Built Around Your Work",
     description:
-      "Every project is tied to outcomes: more calls answered, more leads captured, and better customer conversion.",
+      "We map the stall points first, then shape the agent and the workflow to the way your team already operates.",
   },
 ];
 
@@ -38,20 +38,19 @@ export default function AboutUs() {
             className="text-4xl md:text-6xl font-extrabold mb-6"
             style={{ fontFamily: "Outfit, sans-serif", color: "#fff", lineHeight: 1.05 }}
           >
-            We Build Websites
+            We Build Voice Agents
             <br />
-            <span className="text-teal-gradient">That Grow Businesses</span>
+            <span className="text-teal-gradient">and AI Workflows</span>
           </h1>
 
           <p
             className="max-w-3xl text-base md:text-lg mb-8"
             style={{ color: "rgba(255,255,255,0.62)", lineHeight: 1.8 }}
           >
-            At Tech4Change, we are a group of ambitious young software developers dedicated
-            to creating impactful digital solutions. We focus on building custom websites
-            that are not only visually appealing but also fast, functional, and designed to
-            convert. By combining creativity with technical expertise, we help businesses
-            elevate their brand and succeed online.
+            At Tech4Change, we are a group of software developers focused on communication
+            and process. We build agentic voice agents that handle the conversation and AI
+            workflows that carry the work through the next step, with a person in the loop
+            when the situation needs one.
           </p>
 
           <div
@@ -68,18 +67,17 @@ export default function AboutUs() {
               Who We Are
             </h2>
             <p className="mb-4" style={{ color: "rgba(255,255,255,0.58)", lineHeight: 1.8 }}>
-              We are a hands-on digital growth company built for everyday business owners.
-              Our team works directly with service businesses and local brands that want to
-              upgrade how they attract leads, respond to customers, and convert traffic into revenue.
+              We work directly with teams whose calls, follow-ups, and handoffs are slowing
+              the rest of the operation. The goal is coverage for the conversation and a
+              path for the job after it.
             </p>
             <p className="mb-4" style={{ color: "rgba(255,255,255,0.58)", lineHeight: 1.8 }}>
-              Unlike agencies that hand over generic templates, Tech4Change builds systems
-              around how your business actually runs. We focus on clear communication, fast
-              implementation, and practical solutions that create measurable improvement.
+              Tech4Change builds the agent and the workflow around how the work already
+              runs. We map the trigger, the route, and the moment a person should take over.
             </p>
             <p style={{ color: "rgba(255,255,255,0.58)", lineHeight: 1.8 }}>
-              Our goal is simple: give small businesses the same quality of technology that
-              larger companies use, but with service and pricing designed for local teams.
+              Our goal is simple: give a team the communication and process capacity that
+              used to require more people watching every call and every next step.
             </p>
           </div>
 
@@ -92,9 +90,9 @@ export default function AboutUs() {
                 What We Build
               </h3>
               <ul className="space-y-2" style={{ color: "rgba(255,255,255,0.6)", lineHeight: 1.7 }}>
-                <li>Custom website design tailored to your brand.</li>
-                <li>Website development focused on speed and lead generation.</li>
-                <li>Digital foundations that support long-term growth.</li>
+                <li>Agentic voice agents for inbound and outbound communication.</li>
+                <li>AI workflows that route, update, notify, and close the loop.</li>
+                <li>Handoffs that pass full context to a person on the team.</li>
               </ul>
             </div>
             <div
@@ -105,9 +103,9 @@ export default function AboutUs() {
                 How We Work
               </h3>
               <ul className="space-y-2" style={{ color: "rgba(255,255,255,0.6)", lineHeight: 1.7 }}>
-                <li>Start with your goals, bottlenecks, and customer journey.</li>
-                <li>Build a custom plan with clear timeline and deliverables.</li>
-                <li>Launch quickly and continue optimizing with you.</li>
+                <li>Start with the conversations and the steps that stall.</li>
+                <li>Design the agent and the workflow around those steps.</li>
+                <li>Put it into daily use and tighten it as real jobs come through.</li>
               </ul>
             </div>
           </div>

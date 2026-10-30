@@ -3,50 +3,45 @@
    4-service grid with glowing cards, images, and feature lists
    ============================================================ */
 import { useEffect, useRef, useState } from "react";
-import { Code2, Search, ArrowRight } from "lucide-react";
+import { Phone, Workflow, ArrowRight } from "lucide-react";
 
-const WEBSITE_IMG = "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1400&q=80";
-const SEO_IMG = "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&w=1400&q=80";
-
-const sitePeekImages = [
-  { src: "/website-showcase-1.png", alt: "Website homepage we built for Trappin Cutz barbershop" },
-  { src: "/website-showcase-2.png", alt: "Website homepage we built for Blessed Style barbershop" },
-];
+const VOICE_IMG = "https://images.unsplash.com/photo-1587560699334-cc4ff634909a?auto=format&fit=crop&w=1400&q=80";
+const WORKFLOW_IMG = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80";
 
 const services = [
   {
-    id: "website-development",
-    icon: Code2,
-    title: "Website Development",
-    tagline: "Built fast and clean",
+    id: "voice-agents",
+    icon: Phone,
+    title: "Agentic Voice Agents",
+    tagline: "The conversation",
     description:
-      "We design and build high-converting, mobile-friendly websites for your business, so you can launch faster without managing developers or technical setup.",
+      "Agents that answer, qualify, book, and follow up on calls and messages, then hand the full context to a person when the situation needs one.",
     features: [
-      "Custom design for your brand",
-      "Fast, mobile-first pages",
-      "Contact forms & lead capture",
-      "SEO-ready structure",
+      "Inbound and outbound conversations",
+      "Qualify, book, and follow up",
+      "Route to the right person",
+      "Human handoff with full context",
     ],
-    image: WEBSITE_IMG,
+    image: VOICE_IMG,
     accent: "#DC2626",
-    badge: "Popular",
+    badge: "Communications",
   },
   {
-    id: "seo-foundations",
-    icon: Search,
-    title: "SEO Foundations",
-    tagline: "Help people find you online",
+    id: "ai-workflows",
+    icon: Workflow,
+    title: "AI Workflows",
+    tagline: "The process after the call",
     description:
-      "We set up the on-page structure your website needs to rank better locally, load well, and support long-term search visibility.",
+      "A trigger starts the job. The workflow routes it, does the repeatable steps, pauses for a person when needed, then closes the loop.",
     features: [
-      "Title tags and page structure",
-      "Local search best practices",
-      "Fast-loading page setup",
-      "Lead-focused content flow",
+      "Trigger from a call, text, or form",
+      "Route to a booking, ticket, or person",
+      "Confirm, update, and notify",
+      "Pick the job back up after a handoff",
     ],
-    image: SEO_IMG,
+    image: WORKFLOW_IMG,
     accent: "#DC2626",
-    badge: "Included",
+    badge: "Operations",
   },
 ];
 
@@ -179,8 +174,7 @@ export default function Services() {
     <div className="relative" style={{ background: "#060B18" }}>
       <div className="absolute inset-0 dot-grid opacity-20 pointer-events-none" />
 
-      {/* Websites for small businesses — intro + offerings (no client site screenshots here) */}
-      <section id="services" className="relative z-10 scroll-mt-24 pt-28 pb-16 md:pb-20">
+      <section id="services" className="relative z-10 scroll-mt-24 pt-28 pb-28 md:pb-32">
         <div className="container">
           <div
             ref={ref}
@@ -195,17 +189,17 @@ export default function Services() {
               className="text-4xl md:text-5xl font-extrabold mb-6 md:mb-8"
               style={{ fontFamily: "Outfit, sans-serif", color: "#fff" }}
             >
-              Websites for
+              Voice agents and
               <br />
-              <span className="text-teal-gradient">small businesses</span>
+              <span className="text-teal-gradient">AI workflows</span>
             </h2>
             <p
               className="max-w-2xl text-base mb-14 md:mb-16"
               style={{ color: "rgba(255,255,255,0.55)", lineHeight: 1.7 }}
             >
-              From brand-new launches to redesigns, Tech4Change builds the website foundation
-              your business needs to look professional and capture more leads online for barbershops,
-              HVAC companies, real estate businesses, and local service providers.
+              The voice agent handles the conversation. The workflow is the path the job
+              takes after something starts it — a call, a text, a form, or a status change —
+              until the work is done or a person takes the next step.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -213,40 +207,6 @@ export default function Services() {
                 <ServiceCard key={service.title} service={service} index={i} />
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Client builds — separate section; showcase images live only here */}
-      <section
-        id="showcase"
-        className="relative z-10 scroll-mt-24 pt-6 md:pt-8 pb-28 md:pb-32"
-        style={{
-          borderTop: "1px solid rgba(220,38,38,0.08)",
-          background: "linear-gradient(180deg, rgba(7,13,28,0.45) 0%, rgba(6,11,24,0.15) 100%)",
-        }}
-        aria-labelledby="site-peek-heading"
-      >
-        <div className="container">
-          <h2
-            id="site-peek-heading"
-            className="text-3xl md:text-4xl font-extrabold mb-6 md:mb-8"
-            style={{ fontFamily: "Outfit, sans-serif", color: "#fff" }}
-          >
-            A peek into the sites we build
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-            {sitePeekImages.map((img) => (
-              <img
-                key={img.src}
-                src={img.src}
-                alt={img.alt}
-                className="w-full rounded-2xl object-cover object-top"
-                style={{ aspectRatio: "16 / 10" }}
-                loading="lazy"
-                decoding="async"
-              />
-            ))}
           </div>
         </div>
       </section>

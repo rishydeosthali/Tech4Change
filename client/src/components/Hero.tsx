@@ -9,9 +9,8 @@ import { ArrowRight, Play, ChevronDown } from "lucide-react";
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663460370702/ecG8FietAg7LHPWEcKYES2/hero-bg-c8iCZrhbxNhgD9Vk4xH9hZ.webp";
 
 const stats = [
-  { value: "100%", label: "Mobile-Friendly Builds" },
-  { value: "24/7", label: "Lead Capture Working for You" },
-  // for future use: { value: "500+", label: "Businesses Empowered" },
+  { value: "24/7", label: "Calls answered and routed" },
+  { value: "Human", label: "Handoff when the call needs one" },
 ];
 
 export default function Hero() {
@@ -23,12 +22,12 @@ export default function Hero() {
     return () => clearTimeout(timer);
   }, []);
 
-  const scrollToShowcase = () => {
-    document.querySelector("#showcase")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   const scrollToServices = () => {
     document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToHowItWorks = () => {
+    document.querySelector("#how-it-works")?.scrollIntoView({ behavior: "smooth" });
   };
 
   const scrollToContact = () => {
@@ -106,8 +105,7 @@ export default function Hero() {
               transition: "all 0.6s ease 0.1s",
             }}
           >
-            <span className="live-dot" />
-            <span className="section-label">Professional Websites for Small Business</span>
+            <span className="section-label">Agentic Voice and AI Workflows</span>
           </div>
 
           {/* Main headline */}
@@ -123,11 +121,11 @@ export default function Hero() {
               transition: "all 0.7s ease 0.2s",
             }}
           >
-            Build Your Business
+            Voice Agents for
             <br />
-            <span className="text-teal-gradient">A Better Website</span>
+            <span className="text-teal-gradient">the Conversation</span>
             <br />
-            <span style={{ color: "rgba(255,255,255,0.9)" }}>That Actually Converts</span>
+            <span style={{ color: "rgba(255,255,255,0.9)" }}>AI Workflows for the Process</span>
           </h1>
 
           {/* Subheadline */}
@@ -143,9 +141,9 @@ export default function Hero() {
               transition: "all 0.7s ease 0.35s",
             }}
           >
-            Tech4Change designs and builds clean, modern websites for local businesses
-            that want to look credible, load fast, and turn visitors into real leads.
-            We especially help barbershops, HVAC companies, real estate brands, and local service providers.
+            Tech4Change builds agentic voice agents that answer, qualify, and route
+            conversations, and AI workflows that carry each request through the next
+            step of your process. A person steps in when the situation needs one.
           </p>
 
           {/* CTAs */}
@@ -162,11 +160,11 @@ export default function Hero() {
               className="btn-amber flex items-center gap-2 px-7 py-3.5 rounded-md text-base"
             >
               {/* for future use: Start Free Trial */}
-              Schedule Free Website Consultation
+              Schedule a Workflow Conversation
               <ArrowRight size={18} />
             </button>
             <button
-              onClick={scrollToServices}
+              onClick={scrollToHowItWorks}
               className="btn-ghost-teal flex items-center gap-2 px-7 py-3.5 rounded-md text-base"
             >
               <Play size={16} fill="currentColor" />
@@ -222,11 +220,11 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <button
-        onClick={scrollToShowcase}
+        onClick={scrollToServices}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 opacity-50 hover:opacity-100 transition-opacity"
         style={{ color: "#DC2626" }}
       >
-        <span className="section-label text-xs">See real sites</span>
+        <span className="section-label text-xs">See what we build</span>
         <ChevronDown size={20} className="animate-bounce" />
       </button>
     </section>

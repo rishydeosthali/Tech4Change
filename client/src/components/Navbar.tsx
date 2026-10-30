@@ -1,12 +1,11 @@
 /* ============================================================
    TECH4CHANGE Navbar — Deep Space Tech / Mission Control
-   Sticky top nav with live indicator, teal accent, dark glass
+   Sticky top nav with teal accent and dark glass
    ============================================================ */
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Recent work", href: "#showcase" },
   { label: "Services", href: "#services" },
   { label: "How It Works", href: "#how-it-works" },
   { label: "Pricing", href: "#pricing" },
@@ -70,7 +69,6 @@ export default function Navbar() {
             >
               Tech <span style={{ color: "#DC2626" }}>4</span> Change
             </span>
-            <span className="live-dot ml-2 hidden sm:block" />
           </a>
 
           {/* Desktop nav */}
@@ -105,7 +103,7 @@ export default function Navbar() {
               className="btn-teal px-3 py-2 rounded-md text-[11px] sm:text-xs md:text-sm font-semibold leading-snug text-center"
             >
               {/* for future use: Get Started Free */}
-              Schedule Free Website Consultation
+              Schedule a Conversation
             </button>
           </div>
 
@@ -148,7 +146,7 @@ export default function Navbar() {
               className="btn-teal mt-2 px-5 py-3 rounded-md text-sm font-semibold w-full"
             >
               {/* for future use: Get Started Free */}
-              Schedule Free Website Consultation
+              Schedule a Conversation
             </button>
           </div>
         </div>
